@@ -14,17 +14,17 @@ const App = () => {
 
   useEffect(() => {
     dispatch(getPosts());
-  }, [currentId, dispatch])
+  }, [dispatch])
 
   return (
     <Container maxwindth="lg">
       <AppBar className={classes.appBar} position="static" color="inherit">
-        <Typography className={classes.heading} variant="h2">Recipeess</Typography>
-        <img className={classes.image} src={recipes} alt="recipes" height="200" />
+        <Typography className={classes.heading} variant="h3">Recipes</Typography>
+        <img className={classes.image} src={recipes} alt="recipes" height="100" />
       </AppBar>
       <Grow in>
         <Container>
-          <Grid container justifyContent="space-between" alignItems="stretch" spacing={3}>
+          <Grid className={classes.mainContainer} container justifyContent="space-between" alignItems="stretch" spacing={3}>
             <Grid item xs={12} sm={7}>
               <Posts setCurrentId={setCurrentId}/>
             </Grid>

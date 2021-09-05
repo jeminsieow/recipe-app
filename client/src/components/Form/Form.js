@@ -57,7 +57,7 @@ const Form = ({ currentId, setCurrentId }) => {
         onSubmit={handleSubmit}
       >
         <Typography variant="h6">
-          {currentId ? "Submit" : "Create"} a recipe
+          {currentId ? "Edit" : "Create"} a recipe
         </Typography>
         <TextField
           name="creator"
@@ -91,7 +91,7 @@ const Form = ({ currentId, setCurrentId }) => {
           label="Tags"
           fullWidth
           value={postData.tags}
-          onChange={(e) => setPostData({ ...postData, tags: e.target.value })}
+          onChange={(e) => setPostData({ ...postData, tags: e.target.value.split(',') })}
         />
         <div className={classes.fileInput}>
           <FileBase
@@ -110,7 +110,7 @@ const Form = ({ currentId, setCurrentId }) => {
           type="submit"
           fullWidth
         >
-          {currentId ? "Submit" : "Create"} a recipe
+          {currentId ? "Edit" : "Create"} a recipe
         </Button>
         <Button
           variant="contained"
