@@ -49,7 +49,7 @@ const Form = ({ currentId, setCurrentId }) => {
   };
 
   return (
-    <Paper className={classes.paper}>
+    <Paper className={classes.paper} raised elevation={6}>
       <form
         autoComplete="off"
         noValidate
@@ -82,6 +82,8 @@ const Form = ({ currentId, setCurrentId }) => {
           variant="outlined"
           label="Recipe"
           fullWidth
+          multiline
+          maxRows={13}
           value={postData.recipe}
           onChange={(e) => setPostData({ ...postData, recipe: e.target.value })}
         />
@@ -113,9 +115,10 @@ const Form = ({ currentId, setCurrentId }) => {
           {currentId ? "Edit" : "Create"} a recipe
         </Button>
         <Button
+          className={classes.buttonClear}
           variant="contained"
-          color="secondary"
-          size="small"
+          color="default"
+          size="medium"
           onClick={clear}
           fullWidth
         >

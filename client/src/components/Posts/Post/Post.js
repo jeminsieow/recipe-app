@@ -10,6 +10,7 @@ import {
 import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
 import DeleteIcon from "@material-ui/icons/Delete";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
+import { shadows } from '@material-ui/system';
 import moment from "moment";
 import useStyles from "./styles";
 import { useDispatch } from 'react-redux';
@@ -20,7 +21,7 @@ const Post = ({ post, setCurrentId }) => {
   const dispatch = useDispatch();
 
   return (
-    <Card className={classes.card}>
+    <Card className={classes.card} raised elevation={6}>
       <CardMedia
         className={classes.media}
         image={post.selectedFile}

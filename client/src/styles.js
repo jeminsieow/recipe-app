@@ -6,14 +6,22 @@ export default makeStyles((theme) => ({
     margin: '30px 0',
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'center',
     alignItems: 'center',
+    padding: '10px 50px',
+
   },
   heading: {
-    color: 'rgba(0,183,255, 1)',
+    color: theme.palette.primary.main,
+    textDecoration: 'none',
+    fontSize: '2.2em',
+    fontWeight: 600,
+    fontFamily: 'arial'
   },
   image: {
-    marginLeft: '15px',
+    marginLeft: '30px',
+    borderRadius: 200,
+    width: 50,
+    height: 50,
   },
   [theme.breakpoints.down('sm')] : {
     mainContainer: {
