@@ -2,13 +2,16 @@
 
 This application is your accessible personal store for recipes you want to save online.
 
+![image](https://user-images.githubusercontent.com/26967037/132170675-86d2998f-a1ae-4fb5-8781-9a903b674c91.png)
+
+
 ---
 
-Created using the MERN stack (MongoDB, Express, React, Node)
+Created using the MERN stack (MongoDB, Express, React, Node).
 
-Redux was used for state management
+Redux was used for state management.
 
-Material UI was used for building components
+Material UI was used for building components.
 
 ---
 
@@ -21,7 +24,5 @@ https://recipe-store-app.herokuapp.com/posts
 ---
 
 TODO:
-* Beautify UI
-* Add multiline recipe textbox
 * Add authentication
-* Add function to allow users to view more details about the recipe
+* Allow users to view more details about the recipe by clicking on the cards
